@@ -1,5 +1,5 @@
 {
-  "name": "monorepo-template",
+  "name": "faulted-run",
   "version": "0.0.0",
   "workspaces": [
     "packages/*"
