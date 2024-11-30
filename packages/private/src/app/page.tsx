@@ -1,34 +1,30 @@
 import { Button } from "@/components/ui/button";
-import { Table, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { redirect } from "next/navigation";
 
 export default function Home() {
   return (
-    <>
-      <ClassesTable />
-    </>
+    <div className="h-svh p-10">
+      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-center">
+        Frittenden Dog Agility Christmas Party 2024
+      </h1>
+      <div className="flex items-center justify-center flex-col gap-10 h-full">
+        <Button
+          onClick={async () => {
+            "use server";
+            redirect("/scrime");
+          }}
+        >
+          Scrime
+        </Button>
+        <Button
+          onClick={async () => {
+            "use server";
+            redirect("/check-in");
+          }}
+        >
+          check in
+        </Button>
+      </div>
+    </div>
   );
 }
-
-const ClassesTable = () => (
-  <>
-    <Table>
-      <ClassesTableHeader />
-    </Table>
-  </>
-);
-
-const ClassesTableHeader = () => (
-  <>
-    <TableHeader>
-      <TableRow>
-        <TableHead>Show Name</TableHead>
-        <TableHead>
-          <Button variant="outline">Scrime</Button>
-        </TableHead>
-        <TableHead>
-          <Button variant="outline">Checker Inner</Button>
-        </TableHead>
-      </TableRow>
-    </TableHeader>
-  </>
-);
