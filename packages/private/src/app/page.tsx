@@ -22,7 +22,15 @@ export default function Home() {
             redirect("/check-in");
           }}
         >
-          check in
+          Check In
+        </Button>
+        <Button
+          onClick={async () => {
+            "use server";
+            redirect("/Results");
+          }}
+        >
+          Results
         </Button>
       </div>
     </div>
