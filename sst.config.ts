@@ -1,12 +1,12 @@
 /// <reference path="./.sst/platform/config.d.ts" />
 import { readdirSync } from "fs";
-
 export default $config({
   app(input) {
     return {
       name: "faulted-run",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
+      providers: { random: "4.16.7" },
     };
   },
   async run() {

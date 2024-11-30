@@ -1,7 +1,6 @@
-const clerk_publishable = new sst.Secret("ClerkPublishable");
-const clerk_secret = new sst.Secret("ClerkSecret");
-
-new sst.aws.Nextjs("next", {
-  path: "packages/next",
-  link: [clerk_publishable, clerk_secret],
+new sst.aws.Nextjs("public", {
+  path: "packages/public",
+});
+new sst.aws.Nextjs("private", {
+  path: "packages/private",
 });
