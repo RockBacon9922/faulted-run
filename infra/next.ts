@@ -1,5 +1,5 @@
-const clerk_publishable = new sst.Secret("clerk_publishable");
-const clerk_secret = new sst.Secret("clerk_secret");
+const clerk_publishable = new sst.Secret("ClerkPublishable");
+const clerk_secret = new sst.Secret("ClerkSecret");
 
 new sst.aws.Nextjs("next", {
   path: "packages/next",

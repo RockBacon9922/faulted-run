@@ -6,5 +6,21 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
+    "ClerkPublishable": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "ClerkSecret": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "next": {
+      "type": "sst.aws.Nextjs"
+      "url": string
+    }
+    "shows": {
+      "name": string
+      "type": "sst.aws.Dynamo"
+    }
   }
 }
