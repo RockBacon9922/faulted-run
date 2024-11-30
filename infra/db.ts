@@ -1,7 +1,7 @@
-export const shows = new sst.aws.Dynamo("shows", {
+export const classes = new sst.aws.Dynamo("classes", {
   fields: {
-    id: "string",
     name: "string",
+    active: "string",
   },
-  primaryIndex: { hashKey: "id", rangeKey: "name" },
+  primaryIndex: { hashKey: "name", rangeKey: "active" },
 });

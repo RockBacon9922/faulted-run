@@ -1,10 +1,10 @@
-import { shows } from "./db";
+import { classes } from "./db";
 
 new sst.aws.Nextjs("public", {
   path: "packages/public",
-  link: [shows],
+  link: [classes],
 });
 new sst.aws.Nextjs("private", {
   path: "packages/private",
-  link: [shows],
+  link: [classes],
 });

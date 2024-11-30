@@ -17,26 +17,10 @@ export type AgilityRunner = z.infer<typeof agility_runner>;
 
 export const agility_class = z.object({
   name: z.string().min(1),
-  height: z.enum([
-    "Large",
-    "Intermediate",
-    "Medium",
-    "Small",
-    "Micro",
-    "Combined",
-  ]),
+  height: z.enum(["Large", "Intermediate", "Medium", "Small", "Micro"]),
   active: z.boolean(),
   runners: z.array(agility_runner).optional(),
   course_time: z.number().int().positive().min(1),
 });
+
 export type AgilityClass = z.infer<typeof agility_class>;
-
-export const agility_show = z.object({
-  id: z.object({ S: z.string().min(1) }),
-  name: z.object({ S: z.string().min(1) }),
-  classes: z.array(agility_class).optional(),
-});
-export type Show = z.infer<typeof agility_show>;
-
-export const agility_shows = z.array(agility_show);
-export type Shows = z.infer<typeof agility_shows>;

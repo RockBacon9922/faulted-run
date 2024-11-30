@@ -6,6 +6,10 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
+    "classes": {
+      "name": string
+      "type": "sst.aws.Dynamo"
+    }
     "private": {
       "type": "sst.aws.Nextjs"
       "url": string
@@ -13,10 +17,6 @@ declare module "sst" {
     "public": {
       "type": "sst.aws.Nextjs"
       "url": string
-    }
-    "shows": {
-      "name": string
-      "type": "sst.aws.Dynamo"
     }
   }
 }
