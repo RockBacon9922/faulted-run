@@ -4,7 +4,7 @@ import { readdirSync } from "fs";
 export default $config({
   app(input) {
     return {
-      name: "monorepo-template",
+      name: "faulted-run",
       removal: input?.stage === "production" ? "retain" : "remove",
       home: "aws",
     };
